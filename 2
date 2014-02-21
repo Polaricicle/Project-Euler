@@ -1,0 +1,19 @@
+limit = 4000000
+i = 1
+j = 2
+even = []
+total = 0
+while i < limit and j < limit: #check value of number is over the limit
+    if i % 2 == 0 and i not in even: #check if it is even
+        even.append(i)
+    if j % 2 == 0 and j not in even: #check if even
+        even.append(j)
+    if i > j: #check for which value is smaller and thus which to add onto which
+        j += i
+    else:
+        i += j
+
+for i in range(0, len(even)): #total value of all even numbers
+    total += even[i]
+
+print(total)
